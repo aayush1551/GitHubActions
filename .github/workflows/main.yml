@@ -1,14 +1,10 @@
-name: CI
-on:
-  push:
-  pull_request:
+name: First Workflow
+on: workflow_dispatch
 jobs:
-  build:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - run: npm install
+      - name: Print greeting
+        run: echo "Hello Neovans"
+      - name: Print goodbye
+        run: echo "Bbye"
